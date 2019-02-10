@@ -7,11 +7,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "cc.peaks.androidtestingbible"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -84,9 +84,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "org.assertj:assertj-core:${assertj}"
     androidTestImplementation "org.assertj:assertj-core:${assertj}"
+
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-RC1'
     testImplementation 'androidx.test:runner:1.1.0-alpha3'
-    testImplementation "org.robolectric:robolectric:4.0-alpha-2"
+//    testImplementation "org.robolectric:robolectric:4.0-alpha-2"
+    testImplementation "org.robolectric:robolectric:4.1"
+    testImplementation 'androidx.test:core:1.1.0'
+
+
+
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
